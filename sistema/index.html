@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">       
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/alertify.core.css" rel="stylesheet" type="text/css"/>
+        <link href="css/alertify.default.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/funciones.js" type="text/javascript"></script>
+        <script src="js/alertify.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+    <body>
+    <br>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">SCPAP-TESSFP</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDroopdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+            <!--Iniciar apartado de menu-->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <a class="nav-link" href="#" id="menuInicio" style="color: white;"><span class="fas fa-home"></span>Inicio</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" style="color:white;" > 
+                            <span class="fas fa-user-check"></span>Beneficiario
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="menuAgregarBeneficiario"><span class="fas fa-user-plus"></span> Agregar</a>
+                            <a class="dropdown-item" href="#" id="menuMostrarBeneficiario"><span class="fas fa-table"></span> Mostrar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" style="color: white;">
+                        <span class="fas fa-money-check-alt"></span>Pagos               
+                        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#" id="menuRegitrarPago">Registrar</a>
+                    <a class="dropdown-item" href="#" id="menuConsultarPago">Consultar</a>
+                    </div>
+                </ul>
+            </div>
+        <!--Fin del menu-->
+        </nav>
+        <br>
+        <div class="row" id="divInicio">
+            <div class="col-12" style="text-align: center;">
+                <img src="img/agua.png" alt="" style="width: 300px; height: 300px; border-radius: 50%; ">
+            </div>
+        </div>
+
+        <div class="row" id="divAgregarBeneficiario" style="display:none;">
+            <div class="col-3">
+            <p class="alert alert-success" style="text-align:center;">Beneficiario</p>
+                <label for="">Clave beneficiario</label>
+                <input type="number" class="form-control form-control-sm" id="txtClaveBeneficiario" placeholder="Clave...">
+                <label>Nombre</label>
+                <input type="text" class="form-control form-control-sm" id="txtNombreBeneficiario" placeholder="Nombre.." >
+                <label>Apellido Paterno</label>
+                <input type="text" class="form-control form-control-sm" id="txtApBeneficiario" placeholder="Apellido Paterno.." >
+                <div class="form-group">
+                    <label>Materno</label>
+                    <input type="text" class="form-control  form-control-sm" id="txtAmBeneficiario" placeholder="Apellido Materno.. " > 
+                </div>
+                <div style="text-align:center;">
+                    <button type="button" class="btn btn-success" id="btnGuardarBeneficiario" value="Guardar">
+                        <i class="fas fa-save"></i>Guardar
+                    </button>
+                    <button type="button" class="btn btn-danger" id="btnNuevo">
+                        <i class="fas fa-broom"></i>Nuevo                
+                    </button>
+                </div>
+            </div>
+            <div class="col-8" style="text-align:center;" id="mostrarBeneficiario"></div>
+        </div> 
+    </div>
+    </body>
+</html>
